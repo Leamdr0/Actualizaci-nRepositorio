@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leandro Huaman | Portafolio Académico</title>
+  
+  <!-- Fuentes modernas de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet" />
+  
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fondo de partículas animadas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <div class="nav-logo">LH<span>.dev</span></div>
+    
+    <!-- Botón hamburguesa para móviles -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#education">Formación</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <main class="wrap">
+    
+    <!-- SECCIÓN: Inicio (Hero) -->
+    <section id="hero">
+      <div class="hero-grid">
+        <div class="hero-text reveal">
+          <div class="hero-badge">Estudiante UPM</div>
+          <h1 class="hero-name">Leandro <span class="accent">Huaman</span></h1>
+          <h2 class="hero-subtitle">Estudiante de Grado de Ingeniería de Servicios y Tecnologías de la Telecomunicación</h2>
+          <p class="hero-desc">
+            Apasionado por los sistemas embebidos, el desarrollo de hardware/software y las redes de radiocomunicación. 
+            Cursando mi tercer año en la Universidad Politécnica de Madrid (UPM).
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Ver mis proyectos</a>
+            <a href="#contact" class="btn btn-ghost">Contactar</a>
+          </div>
+        </div>
+        
+        <!-- Terminal interactiva (efecto visual) -->
+        <div class="terminal reveal reveal-delay-2">
+          <div class="terminal-bar">
+            <div class="dot r"></div>
+            <div class="dot y"></div>
+            <div class="dot g"></div>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">leandro@upm:~$</span> <span class="t-cmd">cat skills.txt</span></div>
+            <div class="t-line t-out">C, Sistemas Embebidos, ARM Cortex-M4, STM32, Wi-Fi 6, Redes Inalámbricas</div>
+            <div class="t-line"><span class="t-prompt">leandro@upm:~$</span> <span class="t-cmd">./ejecutar_futuro</span></div>
+            <div class="t-line t-out">Iniciando carrera profesional... <span class="t-val">[OK]</span></div>
+            <div class="t-line"><span class="t-prompt">leandro@upm:~$</span><span class="t-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Sobre mí -->
+    <section id="about" class="reveal">
+      <div class="section-label">01. Conóceme</div>
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="divider"></div>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Soy estudiante de tercer año del <strong>Grado en Ingeniería de Tecnologías y Servicios de Telecomunicación</strong> 
+            en la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT) de la UPM.
+          </p>
+          <p>
+            Me especializo en diseñar tanto la parte lógica como física de sistemas complejos. Mi experiencia 
+            abarca desde la programación bare-metal de microcontroladores (STM32) hasta la planificación y 
+            diseño de infraestructuras de red modernas como Wi-Fi 6. 
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">3º</div>
+            <div class="stat-label">Año de Grado</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">+10</div>
+            <div class="stat-label">Proyectos Académicos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Proyectos -->
+    <section id="projects">
+      <div class="section-label">02. Portafolio</div>
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <p class="section-sub">Trabajos desarrollados durante mi formación en la UPM, aplicando conocimientos teóricos a problemas reales de ingeniería.</p>
+      <div class="divider"></div>
+
+      <!-- Proyecto 1: SIMONE -->
+      <div class="project-card reveal">
+        <div class="project-inner">
+          <div class="project-info">
+            <div class="project-tag">Sistemas Digitales II</div>
+            <h3 class="project-title">SIMONE: Juego de Memoria y Velocidad</h3>
+            <p class="project-desc">
+              Desarrollo de un sistema electrónico empotrado complejo basado en el microcontrolador ARM Cortex-M4 (Placa Nucleo-STM32F446RE). 
+              Consiste en una reinvención del clásico juego de los años 80 "Simon", orquestando periféricos de hardware en tiempo real.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">C (Bare-metal)</span>
+              <span class="tech-chip">STM32F446RE</span>
+              <span class="tech-chip">Máquinas de Estados (FSM)</span>
+              <span class="tech-chip">Interrupciones (ISR) y Timers</span>
+              <span class="tech-chip">PWM</span>
+            </div>
+            <div class="project-highlights">
+              <div class="hl-item">Implementación de drivers de bajo nivel para un teclado matricial 4x4 y un LED RGB.</div>
+              <div class="hl-item">Diseño de algoritmos de "debounce" (anti-rebotes) por software para el hardware mecánico.</div>
+              <div class="hl-item">Gestión de modos de bajo consumo (Sleep mode) para optimizar la batería suspendiendo el SysTick.</div>
+              <div class="hl-item">Documentación rigurosa de APIs utilizando Doxygen.</div>
+            </div>
+            <a href="https://github.com/tu-usuario/simone" target="_blank" class="btn btn-ghost">Ver en GitHub</a>
+          </div>
+          <div class="project-visual">
+             <!-- Representación visual minimalista de la placa STM32 -->
+             <div style="width: 200px; height: 260px; background: #111; border: 2px solid var(--accent); border-radius: 12px; position: relative; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                <div style="color: var(--accent); font-family: var(--mono); font-size: 10px;">STM32F446RE</div>
+                <div style="width: 50px; height: 50px; background: #222; border: 1px solid #444; border-radius: 4px;"></div>
+                <div style="display: flex; gap: 10px;">
+                   <div style="width: 15px; height: 15px; border-radius: 50%; background: #ff5c7a; box-shadow: 0 0 10px #ff5c7a;"></div>
+                   <div style="width: 15px; height: 15px; border-radius: 50%; background: #00e6b4; box-shadow: 0 0 10px #00e6b4;"></div>
+                   <div style="width: 15px; height: 15px; border-radius: 50%; background: #00aeff; box-shadow: 0 0 10px #00aeff;"></div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2: RCOM -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-inner reverse">
+          <div class="project-info">
+            <div class="project-tag">Radiocomunicaciones (RCOM)</div>
+            <h3 class="project-title">Red de Acceso Radio Banda Ancha Wi-Fi 6</h3>
+            <p class="project-desc">
+              Planificación y dimensionamiento de una red de acceso de banda ancha basada en la tecnología Wi-Fi 6 (802.11ax) para su despliegue en Castilla y León.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Wi-Fi 6 (802.11ax)</span>
+              <span class="tech-chip">Planificación Radio</span>
+              <span class="tech-chip">Regulación de Espectro (CNAF/UIT)</span>
+              <span class="tech-chip">Telecomunicaciones</span>
+            </div>
+            <div class="project-highlights">
+              <div class="hl-item">Análisis de la atribución nacional e internacional de frecuencias (bandas 5.470-5.725 GHz y 5.945-6.425 GHz) según el CNAF y la Región 1 de la UIT.</div>
+              <div class="hl-item">Evaluación de requisitos de detección, operación y respuesta (DFS) para mitigación de interferencias con radares y sistemas satelitales.</div>
+              <div class="hl-item">Diseño de arquitectura de red para maximizar la cobertura y la tasa de transferencia en entornos rurales y urbanos.</div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <!-- Representación visual minimalista de propagación Wi-Fi -->
+            <div style="position: relative; display: flex; align-items: flex-end; justify-content: center; height: 150px; width: 200px;">
+               <div style="position: absolute; bottom: 0; width: 10px; height: 30px; background: var(--text); border-radius: 5px;"></div>
+               <div style="position: absolute; bottom: 15px; width: 60px; height: 60px; border-top: 4px solid var(--accent); border-radius: 50%; opacity: 1;"></div>
+               <div style="position: absolute; bottom: 15px; width: 120px; height: 120px; border-top: 4px solid var(--accent2); border-radius: 50%; opacity: 0.6;"></div>
+               <div style="position: absolute; bottom: 15px; width: 180px; height: 180px; border-top: 4px solid var(--accent); border-radius: 50%; opacity: 0.2;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN: Formación -->
+    <section id="education" class="reveal">
+      <div class="section-label">03. Trayectoria</div>
+      <h2 class="section-title">Formación Académica</h2>
+      <div class="divider"></div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Septiembre 2023 - Actualidad</div>
+          <h3 class="timeline-title">Grado en Ingeniería de Tecnologías y Servicios de Telecomunicación</h3>
+          <div class="timeline-sub">Universidad Politécnica de Madrid (UPM) - ETSIT</div>
+          <p class="timeline-body">
+            Actualmente cursando el tercer año. Adquiriendo sólidos conocimientos en electrónica, sistemas digitales, telemática, programación de bajo nivel y diseño de redes de radiocomunicación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Contacto -->
+    <section id="contact" class="reveal">
+      <div class="section-label">04. Conecta</div>
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-sub">¿Interesado en mi perfil para prácticas o proyectos? Estoy abierto a nuevas oportunidades en el sector de las telecomunicaciones y la electrónica.</p>
+      <div class="divider"></div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:leamdr0hg@gmail.com" style="color: white;">leamdr0hg@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Ubicación</div>
+              <div class="contact-value">Madrid, España</div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://linkedin.com/in/Leamdr0" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="https://github.com/Leamdr0" target="_blank" class="social-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Diseñado y programado para el portafolio de <span>Leandro Huaman</span> © 2026.</p>
+  </footer>
+
+  <!-- Enlace al script JS externo -->
+  <script src="main.js"></script>
+</body>
+</html>
